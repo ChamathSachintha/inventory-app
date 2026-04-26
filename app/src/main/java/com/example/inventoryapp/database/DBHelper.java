@@ -6,12 +6,16 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    // Database name and version
     private static final String DB_NAME = "inventory.db";
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;
 
-    // Table name
     public static final String TABLE_PRODUCTS = "products";
+
+    public static final String COL_ID = "id";
+    public static final String COL_NAME = "name";
+    public static final String COL_QUANTITY = "quantity";
+    public static final String COL_PRICE = "price";
+    public static final String COL_IMAGE_URI = "image_uri";
 
     public DBHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -20,12 +24,12 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        // Create products table
         String query = "CREATE TABLE " + TABLE_PRODUCTS + " ("
-                + "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + "name TEXT, "
-                + "quantity INTEGER, "
-                + "price REAL"
+                + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + COL_NAME + " TEXT NOT NULL, "
+                + COL_QUANTITY + " INTEGER NOT NULL, "
+                + COL_PRICE + " REAL NOT NULL, "
+                + COL_IMAGE_URI + " TEXT"
                 + ")";
 
         db.execSQL(query);
@@ -34,10 +38,9 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-        // Drop old table if exists
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_PRODUCTS);
-
-        // Recreate table
-        onCreate(db);
+        // PRODUCTION SAFE UPGRADE (better than drop in real apps)
+        if (oldVersion < 2) {
+            db.execSQL("ALTER TABLE " + TABLE_PRODUCTS + " ADD COLUMN " + COL_IMAGE_URI + " TEXT");
+        }
     }
 }

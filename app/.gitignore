@@ -1,1 +1,33 @@
-/build
+# Gradle
+.gradle/
+build/
+
+# Local config
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Build outputs
+*.apk
+*.aab
+output-metadata.json
+
+# Native build
+.externalNativeBuild/
+.cxx/
+
+# Device / profiling
+captures/
+*.hprof
+
+# Keystore
+*.jks
+*.keystore
+
+# Google services
+google-services.json
