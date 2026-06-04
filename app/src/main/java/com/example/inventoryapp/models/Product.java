@@ -38,7 +38,7 @@ public class Product {
         return imageUri;
     }
 
-    // Setters (optional but good for edit feature)
+    // Setters
     public void setId(int id) {
         this.id = id;
     }

@@ -1,3 +1,50 @@
 <resources>
     <string name="app_name">InventoryApp</string>
+    <string name="app_title">Inventory Management System</string>
+    <string name="total_stock_items">Total Stock Items</string>
+    <string name="default_total_stock">0</string>
+    <string name="total_valuation">Total Valuation</string>
+    <string name="default_total_value">LKR 0.00</string>
+    <string name="add_product">Add Product</string>
+    <string name="view_inventory">View Inventory</string>
+    <string name="open_smart_hub">Open Smart Hub</string>
+
+    <string name="smart_hub_title">Smart Hub</string>
+    <string name="currency_converter">Currency Converter</string>
+    <string name="enter_amount_usd">Enter Amount (USD)</string>
+    <string name="convert_to_lkr">Convert to LKR</string>
+    <string name="result">Result</string>
+    <string name="trending_products">Trending Products</string>
+
+    <string name="inventory_title">Inventory</string>
+    <string name="search_hint">Search products&#8230;</string>
+
+    <string name="select_image">Select Image</string>
+    <string name="product_name_hint">Product Name</string>
+    <string name="quantity_hint">Quantity</string>
+    <string name="price_hint">Price</string>
+    <string name="save_product">Save Product</string>
+
+    <!-- Login -->
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login_subtitle">Login to your account</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="dont_have_account">Don\'t have an account? </string>
+    <string name="sign_up">Sign Up</string>
+
+    <!-- Sign Up -->
+    <string name="create_account">Create Account</string>
+    <string name="signup_subtitle">Join the inventory system</string>
+    <string name="full_name">Full Name</string>
+    <string name="create_username">Create Username</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_account">Already have an account? </string>
+
+    <string name="profile_desc">Profile</string>
+    <string name="user_avatar_desc">User Avatar</string>
+
+    <string name="logout">Logout</string>
+    <string name="logged_out">Logged out</string>
 </resources>

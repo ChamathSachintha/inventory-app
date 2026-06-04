@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Outer Frame -->
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M10,10h80v80h-80z" />
+    <!-- Inner White Area -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,18h64v50h-64z" />
+    <!-- Sun -->
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M30,35m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0" />
+    <!-- Mountains -->
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M20,68l15,-20l10,12l15,-25l20,33z" />
+</vector>

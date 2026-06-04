@@ -2,4 +2,17 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Dark Theme Colors (Not Pitch Black) -->
+    <color name="primary">#8AB4F8</color> <!-- Softer Blue for Dark Mode -->
+    <color name="background">#121212</color> <!-- Material Dark Background -->
+    <color name="surface">#1F1F1F</color> <!-- Slightly Lighter for Cards/Surfaces -->
+    <color name="text_primary">#E6E6E6</color> <!-- Off-white Text -->
+    <color name="text_secondary">#A0A0A0</color> <!-- Grey Secondary Text -->
+    <color name="border">#333333</color>
+    <color name="danger">#F28B82</color> <!-- Softer Red for Dark Mode -->
+
+    <color name="secondary_bg">#2D2D2D</color>
+    <color name="secondary_stroke">#444444</color>
+    <color name="secondary_text">#CCCCCC</color>
 </resources>

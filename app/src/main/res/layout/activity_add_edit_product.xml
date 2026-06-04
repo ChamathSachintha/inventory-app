@@ -1,49 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/add_edit_root"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/add_product"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
 
         <!-- IMAGE PREVIEW CARD -->
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_gravity="center"
-            app:cardCornerRadius="16dp"
+            app:cardCornerRadius="20dp"
             app:cardElevation="4dp"
-            android:layout_marginBottom="16dp">
+            app:strokeWidth="0dp"
+            android:layout_marginBottom="20dp">
 
             <ImageView
                 android:id="@+id/imgProduct"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@mipmap/ic_launcher"
+                android:src="@drawable/ic_product_placeholder"
                 android:scaleType="centerCrop"
-                android:background="#F3F4F6"/>
+                android:background="@color/background"/>
         </com.google.android.material.card.MaterialCardView>
 
         <!-- SELECT IMAGE -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSelectImage"
-            android:layout_width="match_parent"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Select Image"
+            android:layout_gravity="center"
+            android:text="@string/select_image"
             android:textAllCaps="false"
             app:cornerRadius="12dp"
-            android:layout_marginBottom="12dp"
-            android:fontFamily="@font/montserrat"/>
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/montserrat"
+            app:backgroundTint="@color/border"
+            android:textColor="@color/secondary_text"
+            app:icon="@android:drawable/ic_menu_camera"/>
 
         <!-- PRODUCT NAME -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Product Name">
+            android:hint="@string/product_name_hint"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.SmallComponent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etName"
@@ -56,8 +77,10 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Quantity"
-            android:layout_marginTop="10dp">
+            android:hint="@string/quantity_hint"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.SmallComponent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etQty"
@@ -71,8 +94,10 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Price"
-            android:layout_marginTop="10dp">
+            android:hint="@string/price_hint"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.SmallComponent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPrice"
@@ -86,12 +111,15 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Save Product"
+            android:layout_height="56dp"
+            android:text="@string/save_product"
             android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:cornerRadius="12dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/montserrat"/>
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/montserrat"
+            app:backgroundTint="@color/primary"/>
 
     </LinearLayout>
 

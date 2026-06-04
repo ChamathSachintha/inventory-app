@@ -16,17 +16,25 @@
         android:theme="@style/Theme.InventoryApp"
         android:exported="true">
 
-        <!-- MAIN ENTRY -->
+        <!-- LOGIN (Launcher) -->
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.LoginActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
         </activity>
+
+        <!-- SIGN UP -->
+        <activity
+            android:name=".activities.SignUpActivity"
+            android:exported="false"/>
+
+        <!-- DASHBOARD -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"/>
 
         <!-- INVENTORY -->
         <activity
